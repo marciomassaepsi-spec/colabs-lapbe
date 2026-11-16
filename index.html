@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colabs LAPBE — Candidatura de Ligantes</title>
+  <meta name="description" content="Formulário para ligantes se candidatarem a fazer posts em colaboração com a LAPBE no Instagram durante as férias.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <img class="hero__logo" src="logo.png" alt="Logo da LAPBE — Liga Acadêmica de Psicologia Baseada em Evidências" width="180">
+      <p class="eyebrow">LAPBE · Férias</p>
+      <h1>Colabs no Instagram</h1>
+      <p class="hero__lead">Quer produzir conteúdo de Psicologia Baseada em Evidências com a gente nas férias? Preencha o formulário, gere o seu PDF e envie para a diretoria.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card card--info" aria-labelledby="como-funciona">
+      <h2 id="como-funciona">Como funciona a colaboração</h2>
+      <ul class="rules">
+        <li><span class="rules__icon" aria-hidden="true">✍️</span><div><strong>Você escreve os roteiros.</strong> O ligante colaborador é responsável pela escrita de todos os roteiros dos posts em que se comprometer.</div></li>
+        <li><span class="rules__icon" aria-hidden="true">🔍</span><div><strong>A diretoria revisa.</strong> Todo roteiro passa pela revisão da diretoria antes de ser aprovado.</div></li>
+        <li><span class="rules__icon" aria-hidden="true">🎨</span><div><strong>A diretoria cuida das artes e edições.</strong> Elas seguem a identidade visual da liga: <span class="chip chip--blue">azul</span> <span class="chip chip--white">branco</span> <span class="chip chip--black">preto</span>.</div></li>
+      </ul>
+    </section>
+
+    <form id="form" class="card" novalidate>
+      <h2>Seus dados</h2>
+
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como você se chama?">
+        <p class="error" data-for="nome" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="setor">Setor</label>
+        <input id="setor" name="setor" type="text" required placeholder="Em qual setor da liga você está?">
+        <p class="error" data-for="setor" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="instagram">@ no Instagram</label>
+        <div class="at">
+          <span aria-hidden="true">@</span>
+          <input id="instagram" name="instagram" type="text" inputmode="text" autocapitalize="none" autocomplete="off" required placeholder="seuperfil" aria-describedby="ig-help">
+        </div>
+        <p id="ig-help" class="hint">Sem espaços. Pode digitar com ou sem o @.</p>
+        <p class="error" data-for="instagram" role="alert"></p>
+      </div>
+
+      <h2>Sua colaboração</h2>
+
+      <fieldset class="field">
+        <legend>Temas de interesse <span class="hint">(marque quantos quiser)</span></legend>
+        <div class="options" id="temas">
+          <label class="opt"><input type="checkbox" name="temas" value="Terapia Cognitivo-Comportamental (TCC)"><span>Terapia Cognitivo-Comportamental (TCC)</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Psicologia Baseada em Evidências"><span>Psicologia Baseada em Evidências</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Saúde mental e bem-estar"><span>Saúde mental e bem-estar</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Transtornos de ansiedade e humor"><span>Transtornos de ansiedade e humor</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Neurociência e comportamento"><span>Neurociência e comportamento</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Mitos e desinformação em Psicologia"><span>Mitos e desinformação em Psicologia</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Carreira e vida acadêmica"><span>Carreira e vida acadêmica</span></label>
+          <label class="opt"><input type="checkbox" name="temas" value="Como ler e entender artigos científicos"><span>Como ler e entender artigos científicos</span></label>
+        </div>
+        <div class="other">
+          <label for="temaOutro">Outro tema</label>
+          <input id="temaOutro" name="temaOutro" type="text" placeholder="Sugira um tema que não está na lista">
+        </div>
+        <p class="error" data-for="temas" role="alert"></p>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Formato preferido para a colab</legend>
+        <div class="options options--row">
+          <label class="opt"><input type="radio" name="formato" value="Carrossel"><span>Carrossel</span></label>
+          <label class="opt"><input type="radio" name="formato" value="Reels"><span>Reels</span></label>
+          <label class="opt"><input type="radio" name="formato" value="Os dois (carrossel e reels)"><span>Os dois</span></label>
+        </div>
+        <p class="error" data-for="formato" role="alert"></p>
+      </fieldset>
+
+      <div class="field">
+        <label for="posts">Quantos posts por mês você tem disponibilidade para fazer?</label>
+        <select id="posts" name="posts" required>
+          <option value="">Selecione…</option>
+          <option value="1">1 post por mês</option>
+          <option value="2">2 posts por mês</option>
+          <option value="3">3 posts por mês</option>
+          <option value="4">4 posts por mês</option>
+          <option value="5">5 ou mais posts por mês</option>
+        </select>
+        <p class="error" data-for="posts" role="alert"></p>
+      </div>
+
+      <section class="notice" aria-labelledby="ciente">
+        <h3 id="ciente">Antes de gerar o PDF, confirme que você está ciente</h3>
+        <ul>
+          <li>Você será responsável pela <strong>escrita dos roteiros</strong>.</li>
+          <li>Os roteiros serão <strong>revisados pela diretoria</strong>.</li>
+          <li>As <strong>artes e edições serão feitas pela diretoria</strong> e seguirão a identidade visual da liga (azul, branco e preto).</li>
+        </ul>
+        <label class="opt opt--check"><input type="checkbox" id="ciente-check" name="ciente"><span>Li e estou de acordo com as responsabilidades acima.</span></label>
+        <p class="error" data-for="ciente" role="alert"></p>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn btn--primary" id="btn-pdf">Gerar PDF</button>
+        <button type="button" class="btn btn--ghost" id="btn-clear">Limpar formulário</button>
+      </div>
+      <p class="hint" id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <img src="logo.png" alt="" width="48">
+    <p>LAPBE — Liga Acadêmica de Psicologia Baseada em Evidências</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
